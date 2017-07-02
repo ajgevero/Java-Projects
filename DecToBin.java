@@ -5,12 +5,17 @@ public class DecToBin {
 	
 	public static void main(String[] args) {
 		System.out.println("Enter any base-10 decimal from 0 - 255: ");
-		int dec = new Scanner(System.in).nextInt();
+		int dec = extracted().nextInt();
 		BreakDown(dec);
-		System.out.println("Here is your number in Binary: ");
 		for (int i : arry){
 			System.out.print(i);
 		}
+		System.out.println("\n");
+		main(args);
+	}
+
+	private static Scanner extracted() {
+		return new Scanner(System.in);
 	}
 	
 	public static void BreakDown(int x) {
